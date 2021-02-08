@@ -7,6 +7,10 @@ import goTo from 'vuetify/es5/services/goto'
 import Default from '@/components/Default'
 import Login from '@/components/login/Index'
 
+//Seguridad
+import Rol from '@/components/seguridad/RolComponent'
+import Usuario from '@/components/seguridad/UsuarioComponent'
+
 Vue.use(Router)
 
 //validar authenticacion
@@ -38,7 +42,19 @@ const routes = [{
     name: 'Login',
     component: Login,
     beforeEnter: multiguard([isLoggedOut])
-  }
+  },
+  //Seguridad
+  {
+    path: '/rol',
+    name: 'Rol',
+    component: Rol,
+    beforeEnter: multiguard([isLoggedIn, permissionsValidations])
+  }, {
+    path: '/user',
+    name: 'Usuario',
+    component: Usuario,
+    beforeEnter: multiguard([isLoggedIn, permissionsValidations])
+  },
 ]
 
 export default new Router({

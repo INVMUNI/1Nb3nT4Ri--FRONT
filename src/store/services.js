@@ -6,6 +6,7 @@ import {
 
 /* ::::::::::::::::::::::::::::::::::::::::::::: SEGURIDAD :::::::::::::::::::::::::::::::::::::::::::::::: */
 import loginService from '../services/seguridad/login/LoginService'
+import menuService from '../services/seguridad/menu/MenuService'
 import rolMenuService from '../services/seguridad/rol/RolMenuService'
 import rolService from '../services/seguridad/rol/RolService'
 import userRolService from '../services/seguridad/usuario/UserRolService'
@@ -74,6 +75,7 @@ instance.interceptors.response.use(response => {
 export default {
 //Seguridad
   loginService: new loginService(Axios, baseUrl),
+  menuService: new menuService(Axios, baseUrl),
   rolMenuService: new rolMenuService(Axios, baseUrl),
   rolService: new rolService(Axios, baseUrl),
   userRolService: new userRolService(Axios, baseUrl),
