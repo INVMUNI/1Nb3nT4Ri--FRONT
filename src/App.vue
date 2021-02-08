@@ -242,8 +242,7 @@ export default {
 
     getMenu() {
       let self = this;
-      //return self.$store.state.menu;
-      return []
+      return self.$store.state.menu;
     },
 
     getImage() {

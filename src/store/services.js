@@ -40,6 +40,7 @@ Axios.interceptors.response.use(response => {
     var original_request = error.config
     return refreshToken().then(res => {
       auth.saveToken(res.data)
+      console.log('desde el service: ', res)
       original_request.headers['Authorization'] = 'Bearer ' + res.data.access_token
       return Axios.request(original_request)
     })

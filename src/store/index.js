@@ -19,9 +19,9 @@ const state = {
   permissions: [],
 
   /* ::::::::::::::::::::: DESARROLLO ::::::::::::::::::::::::: */
-  // base_url: 'http://127.0.0.1:8001/ProyectoBase/public/',
-  // client_id: 2,
-  // client_secret: 't6LqVNQoiMx7aYceb44vBupKptrzXLF9MJ5OGdOD',
+  base_url: 'http://localhost:8001/backend_inventario/public/',
+  client_id: 2,
+  client_secret: 'ZwItCRBnAIxv5nyZIwwOQV1SsUK8bih2k6XkTTdr'
 }
 
 const mutations = {

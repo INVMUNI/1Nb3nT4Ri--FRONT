@@ -6,7 +6,6 @@ import goTo from 'vuetify/es5/services/goto'
 
 import Default from '@/components/Default'
 import Login from '@/components/login/Index'
-import Prueba from '@/components/Prueba'
 
 Vue.use(Router)
 
@@ -38,12 +37,6 @@ const routes = [{
     path: '/login',
     name: 'Login',
     component: Login,
-    beforeEnter: multiguard([isLoggedOut])
-  },
-  {
-    path: '/default',
-    name: 'Prueba',
-    component: Prueba,
     beforeEnter: multiguard([isLoggedOut])
   }
 ]

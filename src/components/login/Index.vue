@@ -82,9 +82,8 @@ export default {
             self.loading = false;
             return;
           }
-          console.log(r.data)
           self.$store.dispatch("guardarToken", r.data);
-          //auth.getUser();
+          auth.getUser();
           self.$router.push("/");
         })
         .catch((e) => {});
